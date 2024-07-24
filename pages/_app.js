@@ -1,11 +1,11 @@
 // pages/_app.js
-import '../styles/globals.css'; // Ensure this path is correct
-import { SessionProvider } from 'next-auth/react';
-import Layout from '../components/Layout'; // Assuming you have a Layout component
+import '../styles/globals.css'; // Import your global styles
+import { SessionProvider } from 'next-auth/react'; // Import SessionProvider
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SessionProvider session={pageProps.session}>
+    <SessionProvider>
       <Layout>
         <Component {...pageProps} />
       </Layout>

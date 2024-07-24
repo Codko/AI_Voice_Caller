@@ -1,0 +1,91 @@
+/* styles/Calendar.module.css */
+.reactCalendarContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  height: 100%;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light background color for better contrast */
+}
+
+.react-calendar {
+  width: 90%;
+  height: auto;
+  max-width: 1200px; /* Larger width for modern look */
+  max-height: 90vh; /* Adjust based on your design needs */
+  background-color: white;
+  border: 1px solid #dfe1e5;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+  padding: 20px; /* Padding for inner spacing */
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 15px 10px; /* Larger padding for bigger tiles */
+  background: none;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.react-calendar__tile--now {
+  background: #ffeb3b33;
+  color: black;
+  font-weight: bold;
+}
+
+.react-calendar__tile--active {
+  background: #4285f4;
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge active tile */
+  font-weight: bold;
+}
+
+.react-calendar__tile--hover {
+  background: #e0e0e0;
+  transform: scale(1.03); /* Slightly enlarge hovered tile */
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  color: #6f48eb;
+  font-size: 18px; /* Larger font for navigation buttons */
+  margin-top: 8px;
+  padding: 10px; /* Padding for better touch targets */
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+  border-color: #6f48eb;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+  font-weight: bold; /* Highlight weekends */
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
+}
+
+.pastDate {
+  color: #d3d3d3 !important; /* Light grey color for past dates */
+  text-decoration: line-through; /* Strike-through for past dates */
+}
